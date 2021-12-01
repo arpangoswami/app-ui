@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "frontinstall": "cd app-ui && npm install",
+    "backinstall": "cd mock-server && npm install",
+    "preinstall": "concurrently -n 'server,client' -c 'red,green' \"npm run backinstall\" \"npm run frontinstall\"",
     "frontend": "cd app-ui && yarn start",
     "backend": "cd mock-server && npm start",
     "start": "concurrently -n 'server,client' -c 'red,green' \"npm run backend\" \"npm run frontend\""
