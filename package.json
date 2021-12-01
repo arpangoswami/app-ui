@@ -1,0 +1,26 @@
+{
+  "name": "app-ui",
+  "version": "1.0.0",
+  "description": "React take home assessment for mage.dev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend": "cd app-ui && yarn start",
+    "backend": "cd mock-server && npm start",
+    "start": "concurrently -n 'server,client' -c 'red,green' \"npm run backend\" \"npm run frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arpangoswami/app-ui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arpangoswami/app-ui/issues"
+  },
+  "homepage": "https://github.com/arpangoswami/app-ui#readme",
+  "dependencies": {
+    "concurrently": "^6.4.0"
+  }
+}
